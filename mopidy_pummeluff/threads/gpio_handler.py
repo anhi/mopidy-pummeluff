@@ -53,7 +53,7 @@ class GPIOHandler(Thread):
         '''
         Run the thread.
         '''
-        GPIO.setmode(GPIO.BOARD)
+        GPIO.setmode(GPIO.BCM)
 
         for pin in self.button_pins:
             LOGGER.debug('Setup pin %s as button pin', pin)
