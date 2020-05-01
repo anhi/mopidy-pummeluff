@@ -33,7 +33,7 @@ class GPIOHandler(Thread):
 
     led_pin = 8
 
-    def __init__(self, core, stop_event):
+    def __init__(self, core, stop_event, config):
         '''
         Class constructor.
 
