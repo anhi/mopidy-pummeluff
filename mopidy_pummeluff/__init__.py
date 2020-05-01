@@ -6,6 +6,8 @@ import os
 
 import mopidy
 
+from mopidy import config
+
 from .frontend import PummeluffFrontend
 from .web import LatestHandler, RegistryHandler, RegisterHandler, UnregisterHandler, \
     ActionClassesHandler
