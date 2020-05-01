@@ -59,6 +59,7 @@ class Extension(mopidy.ext.Extension):
         schema['rfid_bus'] = config.Integer()
         schema['rfid_dev'] = config.Integer()
         schema['rfid_pin_rst'] = config.Integer()
+        schema['rfid_pin_irq'] = config.Integer()
         return schema
 
     def setup(self, registry):

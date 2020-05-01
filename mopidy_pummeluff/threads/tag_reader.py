@@ -50,7 +50,9 @@ class TagReader(Thread):
         self.stop_event = stop_event
         self.rfid = RFID(bus=config['pummeluff']['rfid_bus'],
                          device=config['pummeluff']['rfid_dev'],
-                         pin_rst=config['pummeluff']['rfid_pin_rst'])
+                         pin_irq=config['pummeluff']['rfid_pin_irq'],
+                         pin_rst=config['pummeluff']['rfid_pin_rst'],
+                         pin_mode=GPIO.BCM)
 
     def run(self):
         '''
