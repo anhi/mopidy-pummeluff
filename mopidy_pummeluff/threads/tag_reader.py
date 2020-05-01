@@ -48,7 +48,9 @@ class TagReader(Thread):
         super().__init__()
         self.core       = core
         self.stop_event = stop_event
-        self.rfid       = RFID(bus=int(config['rfid_bus']), device=int(config['rfid_dev']), pin_rst=config['rfid_pin_rst'])
+        self.rfid = RFID(bus=config['pummeluff']['rfid_bus'],
+                         device=config['pummeluff']['rfid_dev'],
+                         pin_rst=config['pummeluff']['rfid_pin_rst'])
 
     def run(self):
         '''
